@@ -49,8 +49,8 @@ function getLista(){                    //Traigo la lista del usuario
 
 const guardarTarea=(e)=>{  //"crea" la lista
 	e.preventDefault()
-	setSeved("")
 	setLista([...lista, { "label": seved, "done": false }])
+	setSeved("")
 }
 console.log(lista)
 console.log(seved)
@@ -72,7 +72,8 @@ return (
 	type="text" 
 	className="form-control" 
 	id="exampleInputEmail1" 
-	aria-describedby="emailHelp" 
+	aria-describedby="emailHelp"
+	value={seved}
 	onChange={(e)=>{setSeved(e.target.value)}}/>
 </div>
 
